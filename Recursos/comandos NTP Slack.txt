@@ -1,0 +1,8 @@
+# Iniciar ntp
+cd /etc/rc.d
+cd rc.ntp start
+cd / 
+ntpq -p 
+
+bibliografia:
+https://docs.slackware.com/es:howtos:network_services:ntp

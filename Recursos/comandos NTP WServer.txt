@@ -1,0 +1,8 @@
+#Status NTP windows Server
+net start w32time
+w32tm /query /status
+w32tm /resync
+net stop w32time
+
+Bibliografia
+https://www.solvetic.com/tutoriales/article/3508-como-configurar-servidor-ntp-windows-server-2016/
