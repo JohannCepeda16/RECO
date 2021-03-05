@@ -1,6 +1,6 @@
-# Iniciar ntp
+# Iniciar ntp Slackware
 cd /etc/rc.d
-cd rc.ntp start
+sh rc.ntpd start
 cd / 
 ntpq -p 
 
