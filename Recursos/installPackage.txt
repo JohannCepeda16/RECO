@@ -4,3 +4,4 @@ cd /mnt
 ls
 cd slackware64
 installpkg nombre_package (full)
+tar -zxvf
