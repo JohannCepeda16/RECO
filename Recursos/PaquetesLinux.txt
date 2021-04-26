@@ -5,8 +5,8 @@ glib-solibs
 glib-solibs-info (optional)
 gawk (optional)
 dialog (optional)
-log-rotate (optional) 
-n-compress (optional)
+log-rotate (optional) *
+n-compress (optional)*
 kbd
 kernel-huge
 lilo
@@ -14,15 +14,15 @@ lilo
 D
 
 cmake (configurar package)
-autoconf
-automake
-flex
+autoconf*
+automake*
+flex*
 git (mariadB)
 gcc 
 gcc ++ 
 gitle (mariaDB)
 ketnel-huge (mariaDB)
-pkconfig 
+pkconfig* 
 
 E
 
@@ -31,18 +31,18 @@ L
 ncurses (Mysql)
 gc (mariaDB)
 jJackson (busqueda-red)
-libaio (mariaDB)
-lib-ffi 
-lib-tercam (mysql)
-lib-ustrim ? (mariaDB)
-lso (complemento cmkae)
-readline (postgresql)
-z-lib(postgresql)
+libaio *(mariaDB)
+lib-ffi *
+lib-tercam* (mysql)
+lib-ustrim* ? (mariaDB)
+lso* (complemento cmkae)
+readline* (postgresql)
+z-lib*(postgresql)
 
 N
 network-scripts
 iputils
 net-tools
 wget (download files web)
-nittle (mariaDB)
+nittle* (mariaDB)
 cyrussasl (mariaDB)
