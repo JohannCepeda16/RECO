@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>Parcial 2 - 2020-2</title>
+    <link rel="shortcut icon" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/theme/1603422001/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Parcial 2 - 2020-2" />
+<link rel="stylesheet" type="text/css" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/styles.php/essential/1603422001/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle","sesskey":"8MTPMfOEPH","loadingicon":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/image.php\/essential\/core\/1603422001\/i\/loading_small","themerev":"1603422001","slasharguments":1,"theme":"essential","jsrev":"1603422001","admin":"admin","svgicons":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/yuilib\/3.17.2\/","comboBase":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/yui_combo.php?m\/1603422001\/","combine":true,"comboBase":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/yui_combo.php?","ext":false,"root":"m\/1603422001\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-formautosubmit":{"requires":["base","event-key"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-calendar-info":{"requires":["base","node","event-mouseenter","event-key","overlay","moodle-calendar-info-skin"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-toolboxes":{"requires":["node","base","event-key","node","io","moodle-course-coursebase","moodle-course-util"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bsgrid-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_corrections-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_hr-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_multilang2-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]}}},"gallery":{"name":"gallery","base":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1603422001\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker"]},"core_comment":{"name":"core_comment","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.1\/MathJax.js?delayStartupUntil=configured"},"core_question_flags":{"name":"core_question_flags","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/question\/flags.js","requires":["base","dom","event-delegate","io-base"]},"core_question_engine":{"name":"core_question_engine","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/question\/qengine.js","requires":["node","event"]},"mod_quiz":{"name":"mod_quiz","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/mod\/quiz\/module.js","requires":["base","dom","event-delegate","event-key","core_question_engine","moodle-core-formchangechecker"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google web fonts -->
+    	<link href="//campusvirtual.escuelaing.edu.co/theme/essential/style/fonts.css" rel="stylesheet" type="text/css">
+	<link href="//campusvirtual.escuelaing.edu.co/theme/essential/style/fonts.css" rel="stylesheet" type="text/css">
+    <!-- iOS Homescreen Icons -->
+    
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/theme/1603422001/homeicon/iphone" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/theme/1603422001/homeicon/ipad" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/theme/1603422001/homeicon/iphone_retina" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/theme/1603422001/homeicon/ipad_retina" /></head>
+
+<body  id="page-mod-quiz-review" class="format-topics  path-mod path-mod-quiz safari dir-ltr lang-en yui-skin-sam yui3-skin-sam campusvirtual-escuelaing-edu-co--moodle pagelayout-incourse course-1707 context-232781 cmid-147681 category-7 three-column essential-colours-default side-regions-with-max-width has-region-side-pre used-region-side-pre has-region-side-post empty-region-side-post has-region-footer-left empty-region-footer-left has-region-footer-middle empty-region-footer-middle has-region-footer-right empty-region-footer-right side-pre-only">
+
+<div class="skiplinks">
+    <a href="#maincontent" class="skip">Skip to main content</a>
+</div><script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js&amp;rollup/1603422001/mcore-min.js"></script><script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/core/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/cslider_1.0.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/custom_1.0.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/alert_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/carousel_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/collapse_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/modal_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/scrollspy_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/tab_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/tooltip_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/bootstrap_plugins/transition_2.3.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/jquery.php/theme_essential/modernizr_2.6.2.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/lib/javascript.php/1603422001/lib/javascript-static.js"></script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/javascript.php/essential/1603422001/head"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+
+    <header id="page-header" class="clearfix">
+
+    <div class="container-fluid">
+   
+    <!-- HEADER: LOGO AREA -->
+<div style="margin:0 auto 0 auto; ma-width:100%;">       
+ <a class="logo" href="http://campusvirtual.escuelaing.edu.co/moodle" title="Home"></a>
+ </div>    
+       
+         
+            </div>
+</header>
+
+<header role="banner" class="navbar navbar">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="http://campusvirtual.escuelaing.edu.co/moodle">Inicio</a>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li class="dropdown langmenu"><a href="" class="dropdown-toggle" data-toggle="dropdown" title="Language">English ‎(en)‎<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="English ‎(en)‎" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/review.php?attempt=936395&amp;lang=en">English ‎(en)‎</a></li><li><a title="Español - Internacional ‎(es)‎" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/review.php?attempt=936395&amp;lang=es">Español - Internacional ‎(es)‎</a></li><li><a title="Español - México ‎(es_mx)‎" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/review.php?attempt=936395&amp;lang=es_mx">Español - México ‎(es_mx)‎</a></li></ul><li class="dropdown"><a href="http://campusvirtual.escuelaing.edu.co/moodle/my/index.php" class="dropdown-toggle" data-toggle="dropdown" title="My Dashboard"><i class="fa fa-dashboard"></i>My Dashboard<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Profile" href="http://campusvirtual.escuelaing.edu.co/moodle/user/profile.php"><em><i class="fa fa-user"></i>Profile</em></a></li><li><a title="Calendar" href="http://campusvirtual.escuelaing.edu.co/moodle/calendar/view.php"><em><i class="fa fa-calendar"></i>Calendar</em></a></li><li><a title="Messages" href="http://campusvirtual.escuelaing.edu.co/moodle/message/index.php"><em><i class="fa fa-envelope"></i>Messages</em></a></li><li><a title="Badges" href="http://campusvirtual.escuelaing.edu.co/moodle/badges/mybadges.php"><em><i class="fa fa-certificate"></i>Badges</em></a></li><li><a title="Private files" href="http://campusvirtual.escuelaing.edu.co/moodle/user/files.php"><em><i class="fa fa-file"></i>Private files</em></a></li><li><a title="Log out" href="http://campusvirtual.escuelaing.edu.co/moodle/login/logout.php"><em><i class="fa fa-sign-out"></i>Log out</em></a></li></ul><li class="dropdown"><a href="http://campusvirtual.escuelaing.edu.co/moodle/my/index.php" class="dropdown-toggle" data-toggle="dropdown" title="My Courses"><i class="fa fa-briefcase"></i>My Courses<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="CVDS_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=303">Ciclos de Vida del Desarrollo de Software 2020-2</a></li><li><a title="FCO2 9_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=2357">Fundamentos de la comunicación 2 Grupo 9 2020-2</a></li><li><a title="FUEC_G12 2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=2470">Fundamentos Económicos GRUPO 12 2020-2</a></li><li><a title="LCAL 3-6_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1167">Lógica Calculativa Grupo 3 y 6 2020-2</a></li><li><a title="MMING2_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1455">Modelos matemáticos para informática Grupo 2 2020-2</a></li><li><a title="POOB_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=95">Programación Orienta a Objetos 2020-2</a></li><li><a title="RECO1_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1707">Redes de Computadores Grupo 1 2020-2</a></li><li><a title="SST_1" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1277">Seguridad y Salud en el Trabajo</a></li><li><a title="SDEVI_2018" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1456">Semillero de Desarrollo de Videojuegos</a></li><li><a title="SIML1_2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1894">Seminario de Inserción Laboral Grupo 1 2020-2</a></li></ul></ul>                <ul class="nav pull-right">
+                    <li></li>
+                    <li class="navbar-text"><div class="logininfo">You are logged in as <a href="http://campusvirtual.escuelaing.edu.co/moodle/user/profile.php?id=20521" title="View profile">JAVIER ESTEBAN LOPEZ PEÑA</a> (<a href="http://campusvirtual.escuelaing.edu.co/moodle/login/logout.php?sesskey=8MTPMfOEPH">Log out</a>)</div></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Start Main Regions -->
+<div id="page" class="container-fluid">
+    <div id="page-content" class="row-fluid">
+        <div id="region-bs-main-and-pre" class="span9">
+            <div class="row-fluid">
+            	                <section id="region-main" class="span8 pull-right">
+                                	<div id="page-navbar" class="clearfix">
+            			<nav class="breadcrumb-button"></nav>
+            			<div class="breadcrumb-nav"><span class="accesshide" id="navbar-label">Page path</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://campusvirtual.escuelaing.edu.co/moodle/"><span itemprop="title">Home</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">My courses</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Redes de Computadores Grupo 1 2020-2" href="http://campusvirtual.escuelaing.edu.co/moodle/course/view.php?id=1707"><span itemprop="title">RECO1_2020-2</span></a></span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span tabindex="0">Evaluaciones</span> <span class="divider"> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&#x25BA;</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="Quiz" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/view.php?id=147681"><span itemprop="title">Parcial 2 - 2020-2</span></a></span></li></ul></nav></div>
+        			</div>
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><table class="generaltable generalbox quizreviewsummary"><tbody><tr><th class="cell" scope="row">Started on</th><td class="cell">Thursday, 8 October 2020, 8:30 AM</td></tr><tr><th class="cell" scope="row">State</th><td class="cell">Finished</td></tr><tr><th class="cell" scope="row">Completed on</th><td class="cell">Thursday, 8 October 2020, 10:09 AM</td></tr><tr><th class="cell" scope="row">Time taken</th><td class="cell">1 hour 39 mins</td></tr><tr><th class="cell" scope="row">Marks</th><td class="cell">29.90/50.00</td></tr><tr><th class="cell" scope="row">Grade</th><td class="cell"><b>2.99</b> out of 5.00 (<b>60</b>%)</td></tr></tbody></table><form action="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/review.php?attempt=936395" method="post" class="questionflagsaveform"><div><div id="q3" class="que multianswer deferredfeedback partiallycorrect"><div class="info"><h3 class="no">Question <span class="qno">1</span></h3><div class="state">Partially correct</div><div class="grade">Mark 3.00 out of 5.00</div><div class="questionflag editable" aria-atomic="true" aria-relevant="text" aria-live="assertive"><input type="hidden" name="q1031099:3_:flagged" value="0" /><input type="checkbox" id="q1031099:3_:flaggedcheckbox" name="q1031099:3_:flagged" value="1" /><input type="hidden" value="qaid=13981960&amp;qubaid=1031099&amp;qid=332097&amp;slot=3&amp;checksum=3fdbf710758037eb6dde81294374a608&amp;sesskey=8MTPMfOEPH&amp;newstate=" class="questionflagpostdata" /><label id="q1031099:3_:flaggedlabel" for="q1031099:3_:flaggedcheckbox"><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/unflagged" alt="Not flagged" id="q1031099:3_:flaggedimg" /></label>
+</div></div><div class="content"><div class="formulation clearfix"><h4 class="accesshide">Question text</h4><input type="hidden" name="q1031099:3_:sequencecheck" value="3" /><p><span style="color: #000000; font-family: Calibri; font-size: medium;">Se tiene la red que se presenta a continuación</span></p>
+<p><span style="color: #000000; font-family: Calibri; font-size: medium;"><img src="http://campusvirtual.escuelaing.edu.co/moodle/pluginfile.php/141019/question/questiontext/1031099/3/332097/Parcial3fig1.png" alt="" width="624" height="296"></span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000; font-family: Calibri; font-size: medium;">Suponga que se acaban de prender todos los equipos de la red y se envían los siguientes frames</span></p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">Origen</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">Destino</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC0</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC1</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC1</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC4</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC3</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC8</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC7</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC1</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC8</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC5</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC6</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC7</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="78">
+<p><span style="font-family: Calibri; font-size: medium;">PC5</span></p>
+</td>
+<td valign="top" width="72">
+<p><span style="font-family: Calibri; font-size: medium;">PC0</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: Calibri; font-size: medium;">&nbsp;</span></p>
+<p><span style="font-family: Calibri; font-size: medium;">Después de estos envíos, Indique cómo queda la tabla de dispersión del switch4 (suponga que las tablas se llenas solamente cuando se envía un frame sobre la red, no cuando el equipo se conecta al equipo activo).</span></p><p><span style="font-family: Calibri; font-size: medium;">PC0&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub1_answer">Answer</label><select id="q1031099:3_sub1_answer" disabled="disabled" class="select custom-select incorrect" name="q1031099:3_sub1_answer"><option value=""></option><option selected="selected" value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: NA<br />Mark 0.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC1&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub2_answer">Answer</label><select id="q1031099:3_sub2_answer" disabled="disabled" class="select custom-select incorrect" name="q1031099:3_sub2_answer"><option value=""></option><option selected="selected" value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: NA<br />Mark 0.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC2&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub3_answer">Answer</label><select id="q1031099:3_sub3_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub3_answer"><option value=""></option><option value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option selected="selected" value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: NA<br />Mark 1.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC3&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub4_answer">Answer</label><select id="q1031099:3_sub4_answer" disabled="disabled" class="select custom-select incorrect" name="q1031099:3_sub4_answer"><option value=""></option><option selected="selected" value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: NA<br />Mark 0.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC4&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub5_answer">Answer</label><select id="q1031099:3_sub5_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub5_answer"><option value=""></option><option value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option selected="selected" value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: NA<br />Mark 1.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC5&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub6_answer">Answer</label><select id="q1031099:3_sub6_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub6_answer"><option value=""></option><option value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option selected="selected" value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: NA<br />Mark 1.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC6&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub7_answer">Answer</label><select id="q1031099:3_sub7_answer" disabled="disabled" class="select custom-select incorrect" name="q1031099:3_sub7_answer"><option value=""></option><option selected="selected" value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: NA<br />Mark 0.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC7&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub8_answer">Answer</label><select id="q1031099:3_sub8_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub8_answer"><option value=""></option><option value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option selected="selected" value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: NA<br />Mark 1.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC8&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub9_answer">Answer</label><select id="q1031099:3_sub9_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub9_answer"><option value=""></option><option value="0">Fa0/1</option><option selected="selected" value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: Fa0/2<br />Mark 1.00 out of 1.00</span></span><br></span></p><p><span style="font-family: Calibri; font-size: medium;">PC9&nbsp; &nbsp;<span class="subquestion"><label class="subq accesshide" for="q1031099:3_sub10_answer">Answer</label><select id="q1031099:3_sub10_answer" disabled="disabled" class="select custom-select correct" name="q1031099:3_sub10_answer"><option value=""></option><option value="0">Fa0/1</option><option value="1">Fa0/2</option><option value="2">Fa0/3</option><option value="3">Fa0/4</option><option selected="selected" value="4">NA</option></select><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: NA<br />Mark 1.00 out of 1.00</span></span>&nbsp;<br></span></p><p><span style="font-family: Calibri; font-size: medium;"><br></span></p>
+<br></div></div></div><div id="q2" class="que multianswer deferredfeedback partiallycorrect"><div class="info"><h3 class="no">Question <span class="qno">2</span></h3><div class="state">Partially correct</div><div class="grade">Mark 10.00 out of 15.00</div><div class="questionflag editable" aria-atomic="true" aria-relevant="text" aria-live="assertive"><input type="hidden" name="q1031099:2_:flagged" value="0" /><input type="checkbox" id="q1031099:2_:flaggedcheckbox" name="q1031099:2_:flagged" value="1" /><input type="hidden" value="qaid=13981959&amp;qubaid=1031099&amp;qid=331279&amp;slot=2&amp;checksum=23d98b0de77237f6c31327eb5f935d0f&amp;sesskey=8MTPMfOEPH&amp;newstate=" class="questionflagpostdata" /><label id="q1031099:2_:flaggedlabel" for="q1031099:2_:flaggedcheckbox"><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/unflagged" alt="Not flagged" id="q1031099:2_:flaggedimg" /></label>
+</div></div><div class="content"><div class="formulation clearfix"><h4 class="accesshide">Question text</h4><input type="hidden" name="q1031099:2_:sequencecheck" value="4" /><p>Basado en la dirección 200.24.64.0/20, asignada por el ISP, &nbsp;realice la división de subredes según lo solicitado. Haga la asignación de mayor a menor y recuerde hacer la asignación de identificadores de subred en orden.</p><div class="editor-indent" style="margin-left: 30px;">
+Red No. 1 de 100 hosts<br>Red No. 2 de 150 hosts<br>Red No. 3 de 300 hosts<br>Red No. 4 de 280 hosts<br>Red No. 5 de 400 hosts<br>Red No. 6 de 10 hosts<br>Red No. 7 de 70 hosts<br>Red No. 8 de 4 hosts<br>Red No. 9 de 4 hosts<br>Red No. 10 de 4 hosts</div>
+<p>Si no es posible asignar un rango IP a alguna de las redes, escriba&nbsp;<strong>No fue posible asignar</strong>&nbsp;</p><b>Asignación de rangos IP<br></b><table border="0" cellpadding="0" cellspacing="0" width="1053">
+
+ <colgroup><col width="44">
+ <col width="145">
+ <col width="216" span="4">
+ </colgroup><tbody><tr height="19">
+  <td height="19" width="44"></td>
+  <td width="145"></td>
+  <td width="216">ID_RED</td>
+  <td width="216">ID_Red</td>
+  <td width="216">Máscara</td>
+  <td width="216">Dirección IP
+  último host del rango</td>
+ </tr>
+ <tr height="19">
+  <td height="19">orden</td>
+  <td width="145">Red No.&nbsp;</td>
+  <td width="216">(En
+  binario, 2 últimos bytes)</td>
+  <td width="216">(Completa
+  en formato decimal</td>
+  <td width="216">(formato
+  decimal</td>
+  <td width="216">(Formato
+  decimal)</td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">1</td>
+  <td align="right" width="145" style="text-align: center; ">100</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub1_answer">Answer</label><input type="text" name="q1031099:2_sub1_answer" value="01001001.00000000" id="q1031099:2_sub1_answer" size="20" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000000.10000000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub2_answer">Answer</label><input type="text" name="q1031099:2_sub2_answer" value="200.24.73.0" id="q1031099:2_sub2_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.128<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub3_answer">Answer</label><input type="text" name="q1031099:2_sub3_answer" value="/25" id="q1031099:2_sub3_answer" size="16" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.128<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub4_answer">Answer</label><input type="text" name="q1031099:2_sub4_answer" value="200.24.73.126" id="q1031099:2_sub4_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.254<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">2</td>
+  <td align="right" width="145" style="text-align: center; ">150</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub5_answer">Answer</label><input type="text" name="q1031099:2_sub5_answer" value="01001000.00000000" id="q1031099:2_sub5_answer" size="18" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000001.00000000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub6_answer">Answer</label><input type="text" name="q1031099:2_sub6_answer" value="200.24.72.0" id="q1031099:2_sub6_answer" size="12" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.65.0<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub7_answer">Answer</label><input type="text" name="q1031099:2_sub7_answer" value="/24" id="q1031099:2_sub7_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.0<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub8_answer">Answer</label><input type="text" name="q1031099:2_sub8_answer" value="200.24.72.254" id="q1031099:2_sub8_answer" size="16" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.65.254<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">3</td>
+  <td align="right" width="145" style="text-align: center; ">300</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub9_answer">Answer</label><input type="text" name="q1031099:2_sub9_answer" value="01000100.00000000" id="q1031099:2_sub9_answer" size="18" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 01000100.00000000<br />Mark 1.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub10_answer">Answer</label><input type="text" name="q1031099:2_sub10_answer" value="200.24.68.0" id="q1031099:2_sub10_answer" size="13" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.68.0<br />Mark 1.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub11_answer">Answer</label><input type="text" name="q1031099:2_sub11_answer" value="/23" id="q1031099:2_sub11_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.254.0<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub12_answer">Answer</label><input type="text" name="q1031099:2_sub12_answer" value="200.24.69.254" id="q1031099:2_sub12_answer" size="15" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.69.254<br />Mark 1.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">4</td>
+  <td align="right" width="145" style="text-align: center; ">280</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub13_answer">Answer</label><input type="text" name="q1031099:2_sub13_answer" value="01000110.00000000" id="q1031099:2_sub13_answer" size="19" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 01000110.00000000<br />Mark 1.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub14_answer">Answer</label><input type="text" name="q1031099:2_sub14_answer" value="200.24.70.0" id="q1031099:2_sub14_answer" size="13" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.70.0<br />Mark 1.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub15_answer">Answer</label><input type="text" name="q1031099:2_sub15_answer" value="/23" id="q1031099:2_sub15_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.254.0<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub16_answer">Answer</label><input type="text" name="q1031099:2_sub16_answer" value="200.24.71.254" id="q1031099:2_sub16_answer" size="16" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.71.254<br />Mark 1.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">5</td>
+  <td align="right" width="145" style="text-align: center; ">400</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub17_answer">Answer</label><input type="text" name="q1031099:2_sub17_answer" value="01000010.00000000" id="q1031099:2_sub17_answer" size="18" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 01000010.00000000<br />Mark 1.00 out of 1.00</span></span>&nbsp;</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub18_answer">Answer</label><input type="text" name="q1031099:2_sub18_answer" value="200.24.66.0" id="q1031099:2_sub18_answer" size="13" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.66.0<br />Mark 1.00 out of 1.00</span></span>&nbsp;</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub19_answer">Answer</label><input type="text" name="q1031099:2_sub19_answer" value="/23" id="q1031099:2_sub19_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.254.0<br />Mark 0.00 out of 1.00</span></span>&nbsp;</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub20_answer">Answer</label><input type="text" name="q1031099:2_sub20_answer" value="200.24.67.254" id="q1031099:2_sub20_answer" size="16" class="form-control correct" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_correct" alt="Correct" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Correct<br />The correct answer is: 200.24.67.254<br />Mark 1.00 out of 1.00</span></span>&nbsp;</td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">6</td>
+  <td align="right" width="145" style="text-align: center; ">10</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub21_answer">Answer</label><input type="text" name="q1031099:2_sub21_answer" value="01001010.00000000" id="q1031099:2_sub21_answer" size="18" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000000.00010000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub22_answer">Answer</label><input type="text" name="q1031099:2_sub22_answer" value="200.24.74.0" id="q1031099:2_sub22_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.16<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub23_answer">Answer</label><input type="text" name="q1031099:2_sub23_answer" value="/28" id="q1031099:2_sub23_answer" size="16" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.240<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub24_answer">Answer</label><input type="text" name="q1031099:2_sub24_answer" value="200.24.74.14" id="q1031099:2_sub24_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.31<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">7</td>
+  <td align="right" width="145" style="text-align: center; ">70</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub25_answer">Answer</label><input type="text" name="q1031099:2_sub25_answer" value="01001001.10000000" id="q1031099:2_sub25_answer" size="18" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01001000.00000000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub26_answer">Answer</label><input type="text" name="q1031099:2_sub26_answer" value="200.24.73.128" id="q1031099:2_sub26_answer" size="15" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.72.0<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub27_answer">Answer</label><input type="text" name="q1031099:2_sub27_answer" value="/25" id="q1031099:2_sub27_answer" size="17" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.128<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub28_answer">Answer</label><input type="text" name="q1031099:2_sub28_answer" value="200.24.73.254" id="q1031099:2_sub28_answer" size="16" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.72.127<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">8</td>
+  <td align="right" width="145" style="text-align: center; ">4</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub29_answer">Answer</label><input type="text" name="q1031099:2_sub29_answer" value="01001010.00010000" id="q1031099:2_sub29_answer" size="19" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000000.00001000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub30_answer">Answer</label><input type="text" name="q1031099:2_sub30_answer" value="200.24.74.16" id="q1031099:2_sub30_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.8<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub31_answer">Answer</label><input type="text" name="q1031099:2_sub31_answer" value="/29" id="q1031099:2_sub31_answer" size="15" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.248<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub32_answer">Answer</label><input type="text" name="q1031099:2_sub32_answer" value="200.24.74.22" id="q1031099:2_sub32_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.15<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">9</td>
+  <td align="right" width="145" style="text-align: center; ">4</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub33_answer">Answer</label><input type="text" name="q1031099:2_sub33_answer" value="01001010.00011000" id="q1031099:2_sub33_answer" size="20" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000000.00100000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub34_answer">Answer</label><input type="text" name="q1031099:2_sub34_answer" value="200.24.74.24" id="q1031099:2_sub34_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.32<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub35_answer">Answer</label><input type="text" name="q1031099:2_sub35_answer" value="/29" id="q1031099:2_sub35_answer" size="16" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.248<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub36_answer">Answer</label><input type="text" name="q1031099:2_sub36_answer" value="200.24.74.30" id="q1031099:2_sub36_answer" size="14" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.39<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+ <tr height="24">
+  <td height="24" align="right">10</td>
+  <td align="right" width="145" style="text-align: center; ">4</td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub37_answer">Answer</label><input type="text" name="q1031099:2_sub37_answer" value="01001010.00100000" id="q1031099:2_sub37_answer" size="18" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 01000000.00101000<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub38_answer">Answer</label><input type="text" name="q1031099:2_sub38_answer" value="200.24.74.32" id="q1031099:2_sub38_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.40<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub39_answer">Answer</label><input type="text" name="q1031099:2_sub39_answer" value="/29" id="q1031099:2_sub39_answer" size="17" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 255.255.255.248<br />Mark 0.00 out of 1.00</span></span></td>
+  <td width="216"><span class="subquestion form-inline"><label class="subq accesshide" for="q1031099:2_sub40_answer">Answer</label><input type="text" name="q1031099:2_sub40_answer" value="200.24.74.38" id="q1031099:2_sub40_answer" size="13" class="form-control incorrect" readonly="readonly" /><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/grade_incorrect" alt="Incorrect" class="questioncorrectnessicon" /><span class="feedbackspan accesshide">Incorrect<br />The correct answer is: 200.24.64.47<br />Mark 0.00 out of 1.00</span></span></td>
+ </tr>
+
+</tbody></table><p><b><br>NOTA</b>: no use identificadores de red que puedan coincidan con el ID de la red completa o el broadcast de la red asignada por el ISP para identificadores de subredes.</p></div><div class="comment clearfix"><h4 class="accesshide">Comments</h4>Comment: <p>Calificación a mano.&nbsp;</p></div></div></div><div id="q1" class="que essay manualgraded complete"><div class="info"><h3 class="no">Question <span class="qno">3</span></h3><div class="state">Complete</div><div class="grade">Mark 8.00 out of 20.00</div><div class="questionflag editable" aria-atomic="true" aria-relevant="text" aria-live="assertive"><input type="hidden" name="q1031099:1_:flagged" value="0" /><input type="checkbox" id="q1031099:1_:flaggedcheckbox" name="q1031099:1_:flagged" value="1" /><input type="hidden" value="qaid=13981958&amp;qubaid=1031099&amp;qid=332089&amp;slot=1&amp;checksum=8418cf67b61ef1389c40cf47a8a62487&amp;sesskey=8MTPMfOEPH&amp;newstate=" class="questionflagpostdata" /><label id="q1031099:1_:flaggedlabel" for="q1031099:1_:flaggedcheckbox"><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/unflagged" alt="Not flagged" id="q1031099:1_:flaggedimg" /></label>
+</div></div><div class="content"><div class="formulation clearfix"><h4 class="accesshide">Question text</h4><input type="hidden" name="q1031099:1_:sequencecheck" value="5" /><div class="qtext"><p>Explique el proceso que ocurre a nivel de las capas de <b>enlace </b>y <b>red </b>cuando se hace un ping desde un computador en una LAN alámbrica con IP 124.16.31.1/19 que va dirigido a la IP 124.16.32.45.</p><p>Incluya en su explicación protocolos como CSMA/CD, ICMP, ARP, IP, CRC y Starting and ending flag entre otros</p></div><div class="ablock"><div class="answer"><div class="qtype_essay_editor qtype_essay_response readonly"><p>Al haber un ping se envían frames entre del primer pc origen al pc destino, estos frames llevan información como la dirección fisica del origen y del destino.  Entonces al empezar su recorrido se realizan CRC en la llegada de este, al salir, en los switches (capa 2) y en los routers al entrar y salir.  Además de esto también determina si a donde esta enviando se encuentra en la misma RED haciendo un AND con su ip destino y la mascara que tiene, si esta determina que esta en la red lo envía sin hacer uso de su gateway.  Ahora el protocolo ARP se encarga de enviar de un paquete con MAC todas en F y este espera que la pc destino responda para asi determinar la dirección de esta</p></div></div><div class="attachments"></div></div></div><div class="comment clearfix"><h4 class="accesshide">Comments</h4>Comment: <p>Mis comentarios:</p><p><ul><li>El CRC no se calcula en los switches</li><li>Faltó hablar de varios protocoles de los que intervienen en el proceso</li><li>Faltó detalle técnico de los protocolos mencionados</li><li>No se explica el caso particular indicado, por ejemplo, con las direcciones IP y las decisiones que toma el origen..</li></ul></p></div></div></div><div id="q4" class="que essay manualgraded complete"><div class="info"><h3 class="no">Question <span class="qno">4</span></h3><div class="state">Complete</div><div class="grade">Mark 8.90 out of 10.00</div><div class="questionflag editable" aria-atomic="true" aria-relevant="text" aria-live="assertive"><input type="hidden" name="q1031099:4_:flagged" value="0" /><input type="checkbox" id="q1031099:4_:flaggedcheckbox" name="q1031099:4_:flagged" value="1" /><input type="hidden" value="qaid=13981961&amp;qubaid=1031099&amp;qid=332263&amp;slot=4&amp;checksum=968095b10307b3b919676a4554f2e387&amp;sesskey=8MTPMfOEPH&amp;newstate=" class="questionflagpostdata" /><label id="q1031099:4_:flaggedlabel" for="q1031099:4_:flaggedcheckbox"><img src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/i/unflagged" alt="Not flagged" id="q1031099:4_:flaggedimg" /></label>
+</div></div><div class="content"><div class="formulation clearfix"><h4 class="accesshide">Question text</h4><input type="hidden" name="q1031099:4_:sequencecheck" value="4" /><div class="qtext"><p>Realice la configuración de la red que se encuentra <a href="http://campusvirtual.escuelaing.edu.co/moodle/pluginfile.php/141019/question/questiontext/1031099/4/332263/Parcial2_simulacion_v1_Clave.pka">AQUÍ</a>,&nbsp; use el enunciado presentado en la simulación como guía para desarrollar la actividad.</p><p><br></p><p>Monte en este espacio el archivo resultado.</p></div><div class="ablock"><div class="answer"><div class="qtype_essay_editor qtype_essay_response readonly"><p>Lo encerrado en rojo es que no alcance a configurarlo, lo en verde es que si esta configurado entonces funciona bien esa parte</p></div></div><div class="attachments"><p><a href="http://campusvirtual.escuelaing.edu.co/moodle/pluginfile.php/232781/question/response_attachments/1031099/4/38433878/Parcial2_simulacion_v1_Clave%20FINALIZADO.pka?forcedownload=1"><img class="icon" alt="application/octet-stream" title="application/octet-stream" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/image.php/essential/core/1603422001/f/unknown"/> Parcial2_simulacion_v1_Clave FINALIZADO.pka</a></p></div></div></div><div class="comment clearfix"><h4 class="accesshide">Comments</h4>Comment: </div></div></div><input type="hidden" name="sesskey" value="8MTPMfOEPH" /><div class="submitbtns"><input type="submit" class="questionflagsavebutton btn btn-secondary" name="savingflags" value="Save the state of the flags" /></div></div></form><div class="submitbtns"><a class="mod_quiz-next-nav" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/view.php?id=147681">Finish review</a></div></div>                </section>
+                                <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="#sb-1">Skip Quiz navigation</a><div class="block block_fake" id="mod_quiz_navblock" role="navigation" aria-labelledby="mod_quiz_navblock_title" data-block="_fake"><div class="header"><div class="title"><div class="block_action"></div><h2><span id="mod_quiz_navblock_title">Quiz navigation</span></h2></div></div><div class="content"><div class="qn_buttons clearfix allquestionsononepage"><a class="qnbutton partiallycorrect free btn btn-secondary thispage" id="quiznavbutton3" title="Partially correct" data-quiz-page="0" href="#"><span class="thispageholder"></span><span class="trafficlight"></span><span class="accesshide">Question </span>1<span class="accesshide"> This page <span class="flagstate"></span></span></a><a class="qnbutton partiallycorrect free btn btn-secondary thispage" id="quiznavbutton2" title="Partially correct" data-quiz-page="1" href="#q2"><span class="thispageholder"></span><span class="trafficlight"></span><span class="accesshide">Question </span>2<span class="accesshide"> This page <span class="flagstate"></span></span></a><a class="qnbutton partiallycorrect free btn btn-secondary thispage" id="quiznavbutton1" title="Partially correct" data-quiz-page="2" href="#q1"><span class="thispageholder"></span><span class="trafficlight"></span><span class="accesshide">Question </span>3<span class="accesshide"> This page <span class="flagstate"></span></span></a><a class="qnbutton partiallycorrect free btn btn-secondary thispage" id="quiznavbutton4" title="Partially correct" data-quiz-page="3" href="#q4"><span class="thispageholder"></span><span class="trafficlight"></span><span class="accesshide">Question </span>4<span class="accesshide"> This page <span class="flagstate"></span></span></a></div><div class="othernav"><a href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/review.php?attempt=936395&amp;showall=0">Show one page at a time</a><a class="mod_quiz-next-nav" href="http://campusvirtual.escuelaing.edu.co/moodle/mod/quiz/view.php?id=147681">Finish review</a></div></div></div><span class="skip-block-to" id="sb-1"></span></aside>                            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"></aside>    </div>
+    
+    <!-- End Main Regions -->
+
+	<footer id="page-footer" class="container-fluid">
+			<div class="row-fluid">
+		<aside id="block-region-footer-left" class="span4 block-region" data-blockregion="footer-left" data-droptarget="1"></aside><aside id="block-region-footer-middle" class="span4 block-region" data-blockregion="footer-middle" data-droptarget="1"></aside><aside id="block-region-footer-right" class="span4 block-region" data-blockregion="footer-right" data-droptarget="1"></aside> 	</div>
+
+	<div class="footerlinks row-fluid">
+    	<hr>
+    	<p class="helplink"></p>
+        
+    	</div>
+	
+
+	</footer>
+
+    <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'http://campusvirtual.escuelaing.edu.co/moodle/lib/requirejs.php/1603422001/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'http://campusvirtual.escuelaing.edu.co/moodle/lib/javascript.php/1603422001/lib/jquery/jquery-3.1.0.min',
+        jqueryui: 'http://campusvirtual.escuelaing.edu.co/moodle/lib/javascript.php/1603422001/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'http://campusvirtual.escuelaing.edu.co/moodle/lib/javascript.php/1603422001/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/lib/javascript.php/1603422001/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "http://campusvirtual.escuelaing.edu.co/moodle/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Play": "Play",
+ "Pause": "Pause",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected"
+});
+
+    });
+});;
+
+require(['core/yui'], function(Y) {
+    M.util.init_skiplink(Y);
+});
+;
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '', {'siteSpeedSampleRate': 50});
+    ga('send', {'hitType' : 'pageview',
+                'page' : '/Pregrado/Ingenier%C3%ADa+de+Sistemas/Redes+de+Computadores+Grupo+1+2020-2/quiz/Parcial+2+-+2020-2',
+                'title' : 'Redes de Computadores Grupo 1 2020-2'
+                });
+;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.yui.add_module({"qtype_multianswer":{"name":"qtype_multianswer","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/question\/type\/multianswer\/module.js","requires":["base","node","event","overlay"]},"core_question_engine":{"name":"core_question_engine","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/question\/qengine.js","requires":["node","event"]},"mod_quiz":{"name":"mod_quiz","fullpath":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/lib\/javascript.php\/1603422001\/mod\/quiz\/module.js","requires":["base","dom","event-delegate","event-key","core_question_engine","moodle-core-formchangechecker"]}});
+
+//]]>
+</script>
+<script type="text/javascript" src="http://campusvirtual.escuelaing.edu.co/moodle/theme/javascript.php/essential/1603422001/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","changesmadereallygoaway":"You have made changes. Are you sure you want to navigate away and lose your changes?","morehelp":"More help","loadinghelp":"Loading...","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"question":{"flagged":"Flagged"},"quiz":{"functiondisabledbysecuremode":"That functionality is currently disabled","startattempt":"Start attempt","timesup":"Time is up!"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {setTimeout("fix_column_widths()", 20);
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\n\nMathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"});
+});
+ M.util.js_pending('random5f930484c70171'); Y.use('core_question_flags', function(Y) { M.core_question_flags.init(Y, "http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/question\/toggleflag.php", [{"src":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/image.php\/essential\/core\/1603422001\/i\/unflagged","title":"Flag this question for future reference","alt":"Not flagged"},{"src":"http:\/\/campusvirtual.escuelaing.edu.co\/moodle\/theme\/image.php\/essential\/core\/1603422001\/i\/flagged","title":"Remove flag","alt":"Flagged"}], ["Flag question","Remove flag"]);  M.util.js_complete('random5f930484c70171'); });
+ M.util.js_pending('random5f930484c70172'); Y.use('mod_quiz', function(Y) { M.mod_quiz.nav.init(Y);  M.util.js_complete('random5f930484c70172'); });
+Y.use("moodle-theme_essential-coloursswitcher",function() {M.theme_essential.initColoursSwitcher({"div":".dropdown-menu"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+Y.use("moodle-core-formautosubmit",function() {M.core.init_formautosubmit({"selectid":"single_select5f930484c70175","nothing":false});
+});
+ M.util.js_pending('random5f930484c70176'); Y.use('qtype_multianswer', function(Y) { M.qtype_multianswer.init(Y, "#q3");  M.util.js_complete('random5f930484c70176'); });
+ M.util.js_pending('random5f930484c70177'); Y.use('qtype_multianswer', function(Y) { M.qtype_multianswer.init(Y, "#q2");  M.util.js_complete('random5f930484c70177'); });
+ M.util.js_pending('random5f930484c70178'); Y.use('mod_quiz', function(Y) { M.mod_quiz.init_review_form(Y);  M.util.js_complete('random5f930484c70178'); });
+ M.util.js_pending('random5f930484c70179'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5f930484c70179'); });
+})();
+//]]>
+</script>
+
+</div>
+
+<!-- Start Google Analytics -->
+<!-- End Google Analytics -->
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+<a href="#top" class="back-to-top" title="Back to top"><i class="fa fa-angle-up "></i></a>
+</body>
+</html>
